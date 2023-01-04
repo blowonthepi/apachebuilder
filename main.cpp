@@ -16,8 +16,6 @@ string domain, email;
 bool includeWWWPrefix;
 
 void handleBuild() {
-    string filename = domain;
-    std::replace(filename.begin(), filename.end(), '.', '-');
     ofstream file("/etc/apache2/sites-available/" + domain + ".conf");
 
     file << "<VirtualHost *:80>" << endl;
